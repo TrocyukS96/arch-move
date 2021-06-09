@@ -1,0 +1,157 @@
+.navigation {
+  @include flex-edit(space-between, center);
+
+  transition: all .3s ease;
+
+
+  &__left {
+    @include flex-edit(center, center);
+
+    margin-left: 3.8rem;
+
+    @media screen and (max-width: 980px) {
+
+      margin: 0;
+      padding: 0;
+
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+    }
+  }
+
+  &__left-item {
+    margin-right: 3rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media screen and (max-width: 980px) {
+      margin: 0;
+
+      position: relative;
+      &::before{
+        content:"";
+
+        width: 14px;
+        height: 14px;
+        border-radius:50%;
+
+        background-color: $whiteColor;
+
+        position: absolute;
+
+        top: 50%;
+        left: -1.6rem;
+
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__left-link {
+    @include text-edit(SF UI Display, 400, .8rem, 2.8);
+
+    color: $secondaryColor;
+
+    @media screen and (max-width: 980px) {
+      font-size: 2rem;
+
+      color:$whiteColor;
+
+
+    }
+  }
+
+  &__right {
+@media screen and (max-width: 980px) {
+  padding: 20px;
+  margin-top: 5rem ;
+
+  background-color: $whiteColor;
+
+  border-radius: 20px;
+}
+  }
+
+  &__btn {
+    width: 99px;
+    height: 48px;
+
+    @include text-edit(SF UI Display, 600, 0.87rem, 2.8);
+
+    &:first-child {
+      margin-right: 3rem;
+
+      width: 28px;
+      height: 25px;
+
+      background-color: transparent;
+      transform: translate(10px, 6px);
+      line-height: 14px;
+      border-radius: 50%;
+      padding-top: 3px;
+
+      &:hover {
+
+        background-color: #0080002b;
+      }
+
+      //@media screen and (max-width: 980px) {
+      //  color:$whiteColor;
+      //}
+    }
+
+    &:nth-child(2) {
+      margin-right: 2.5rem;
+
+
+    }
+
+    &:last-child {
+      background-color: $accentColor;
+
+      //@media screen and (max-width: 980px) {
+      //  background-color: $whiteColor;
+      //}
+    }
+
+
+    @media screen and (max-width: 980px) {
+      font-size: 1.4rem;
+
+      width: 100px;
+      height: 61px;
+
+      border-radius: 20px
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+    width: 100%;
+
+    padding-top: 4rem;
+
+    flex-direction: column;
+    justify-content: start;
+
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    //left: -100%;
+
+    background-color: $accentColor;
+
+    color: $whiteColor;
+
+    opacity: 0.8;
+
+    &.active{
+      right:0;
+    }
+  }
+}

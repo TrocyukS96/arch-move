@@ -1,0 +1,19 @@
+.header{
+  max-width: 1160px;
+
+  margin: 0 auto;
+  padding: 40px 15px;
+
+  //display: flex;
+  //@include flex-edit(space-between, center);
+
+  position: relative;
+
+  &__logo{
+    position: absolute;
+    top: 50%;
+    transform: translate(0px, -50%);
+
+  }
+
+}
