@@ -2,6 +2,8 @@
 @import './_fonts.scss';
 @import './_mixins.scss';
 @import './_vars';
+
+@import './magnific.scss';
 ////////////////////
 
 
@@ -61,6 +63,14 @@ img{
     letter-spacing: -0.04em;
 
     color: $textColor;
+
+    @media screen and (max-width:1140px ) {
+        font-size: 4rem;
+        text-align: center;
+    }
+    @media screen and (max-width:1140px ) {
+        font-size: 3rem;
+    }
 }
 .txt{
     @include text-edit(SF UI Display, 400, 1rem, 1.6);
@@ -75,3 +85,4 @@ img{
 @import './burger';
 @import './navigation';
 @import './hero';
+@import './examples';
