@@ -1,0 +1,72 @@
+.hero {
+  &__container{
+    max-width: 1110px;
+    margin: 0 auto;
+
+    padding: 0 15px;
+
+  }
+  &__title {
+    font-size: 7rem;
+
+    @media screen and (max-width:1140px ) {
+      font-size: 4rem;
+      text-align: center;
+    }
+    @media screen and (max-width:1140px ) {
+      font-size: 3rem;
+    }
+    }
+
+  &__title-span {
+    color:$accentColor;
+  }
+
+  &__wrap {
+    margin-top: 3.5rem;
+
+    @include flex-edit(space-between, flex-start);
+
+    flex-wrap: wrap;
+
+    @media screen and (max-width:1140px ){
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+    @media screen and (max-width:680px ) {
+      margin-top: 1rem;
+    }
+    }
+
+  &__discr {
+    max-width: 16.1rem;
+
+    @media screen and (max-width:1140px ){
+      max-width: 31.1rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+  }
+
+  &__txt {
+  }
+
+  &__btn {
+    margin-top: 2.5rem;
+
+    width: 179px;
+    height: 56px;
+
+    @media screen and (max-width:1140px ) {
+      margin-top: 1rem;
+    }
+    }
+
+  &__view {
+  }
+
+  &__img {
+
+  }
+}
