@@ -1,0 +1,146 @@
+.benefits{
+
+  &__container{
+    max-width: 1050px;
+    padding: 0 15px;
+
+    margin: 0 auto;
+  }
+  &__title{
+    margin-top: 7rem;
+
+    @media screen and (max-width: 1140px) {
+      text-align: center;
+
+    }
+  }
+  &__wrap{
+    @include flex-edit(start, center);
+
+    @media screen and (max-width: 1080px){
+      flex-direction: column;
+      align-items: center;
+    }
+
+  }
+  &__view{
+    margin-right: 11rem;
+
+    @media screen and (max-width: 1080px) {
+      margin-right: 0;
+    }
+    }
+  &__img{
+    width: 535px;
+    height: 610px;
+    @media screen and (max-width: 1080px) {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+  &__discr{}
+  &__list{
+    margin: 0;
+    padding: 0;
+  }
+  &__item{
+    margin-bottom: 3rem;
+    position: relative;
+
+    &:first-child{
+
+        &::before{
+          content:"";
+
+          width: 48px;
+          height: 55.08px;
+
+          background-image: url("./../../assets/images/icons/benefits-icon1.png");
+          position: absolute;
+          top: 0%;
+          left: -80px;
+
+        @media screen and (max-width: 1080px) {
+          top: -70px;
+          left: 50%;
+
+          transform: translateX(-50%);
+        }
+      }
+    }
+    &:nth-child(2){
+
+      &::before{
+        content:"";
+
+        width: 40px;
+        height: 48.08px;
+
+        background-image: url("./../../assets/images/icons/benefits-icon2.png");
+        position: absolute;
+        top: 0%;
+        left: -80px;
+
+        @media screen and (max-width: 1080px) {
+          top: -70px;
+          left: 50%;
+
+          transform: translateX(-50%);
+        }
+      }
+    }
+    &:last-child{
+      margin-bottom:0 ;
+      &::before{
+        content:"";
+
+        width: 40px;
+        height: 52.08px;
+
+        background-image: url("./../../assets/images/icons/benefits-icon3.png");
+        position: absolute;
+        top: 0%;
+        left: -80px;
+
+        @media screen and (max-width: 1080px) {
+          top: -70px;
+          left: 50%;
+
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+
+    @media screen and (max-width: 1080px) {
+      margin-top:8rem;
+
+      text-align: center;
+    }
+
+  }
+  &__item-title{
+    margin-bottom: 0.5rem;
+
+@include text-edit(SF UI Display, 700, 1rem, 1.6);
+
+    color: $textColor;
+  }
+  &__item-txt{
+    font-size: 1rem;
+  }
+  &__btn{
+    margin-top: 2rem;
+
+    width: 175px;
+    height: 56px;
+
+    @media screen and (max-width: 1080px) {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

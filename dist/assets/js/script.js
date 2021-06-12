@@ -6,11 +6,22 @@ $(document).ready(()=>{
         $(".navigation, .burger-menu").toggleClass("active");
         $("body").toggleClass("lock");
     })
-
 })
-$(document).ready(($) => {
-    $('.examples__wrap').magnificPopup({
-        type: 'inline'
-    });
+
+const swiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    speed: 600,
+
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    slidesPerView: 1,
+    spaceBetween: 40,
+
 });
 //# sourceMappingURL=script.js.map

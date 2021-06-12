@@ -1,0 +1,118 @@
+.swiper {
+  position: relative;
+
+
+  .swiper-container {
+    width: 600px;
+    height: 300px;
+
+    @media screen and (max-width: 1080px){
+      width: 600px;
+      height: 430px;
+    }
+  }
+
+  swiper-slide{}
+
+    .swiper-slide__txt{
+      font-size: 2rem;
+
+      @media screen and (max-width: 1080px) {
+        text-align: center;
+      }
+
+      }
+    .swiper-slide__author{
+      display: block;
+
+      margin-top: 2rem;
+
+      @include text-edit(SF UI Display, 400, 1rem, 1.6);
+
+      @media screen and (max-width: 1080px) {
+        margin-top: 1rem;
+      }
+    }
+    .swiper-slide__span{
+      @include text-edit(SF UI Display, 700, 1rem, 1.6);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .arrow-prev,
+  .arrow-next {
+    width: 16px;
+    height: 14px;
+
+  }
+
+  .swiper-button-prev:after, .swiper-button-next:after {
+    display: none;
+  }
+
+  .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    left: 68%;
+    transform: translateX(-50%);
+    top: 90%;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid $bgColor;
+
+
+    @media screen and (max-width: 1080px) {
+      left: 45%;
+      top: 90%;
+    }
+    @media screen and (max-width: 740px) {
+      left: 40%;
+    }
+
+    @media screen and (max-width: 580px) {
+      left: 35%;
+    }
+  }
+
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    width: 48px;
+    height: 48px;
+
+    right: 21%;
+    transform: translateX(-50%);
+    top: 90%;
+
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+
+
+    @media screen and (max-width: 1080px) {
+      right: 45%;
+      top: 90%;
+    }
+    @media screen and (max-width: 1080px) {
+      right: 40%;
+    }
+
+    @media screen and (max-width: 580px) {
+      right: 35%;
+    }
+  }
+}
